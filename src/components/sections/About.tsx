@@ -105,19 +105,19 @@ export default function About() {
               <div className="relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-primary to-primary-light shadow-lg">
                 <img
                   src="/images/profile/profile.png"
-                  alt="Francis Anim"
+                  alt="Andy Anim"
                   className="h-full w-full object-cover"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
                   }}
                 />
                 <span className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white/90 select-none">
-                  FA
+                  AA
                 </span>
               </div>
               <div className="text-center sm:text-left">
                 <h3 className="mb-1 text-xl font-bold text-foreground">
-                  Francis Anim
+                  Andy Anim
                 </h3>
                 <p className="mb-3 text-sm font-medium text-primary">
                   BCom Accounting Student &amp; Entrepreneur

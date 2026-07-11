@@ -70,7 +70,7 @@ const initials: Record<string, string> = {
   "kasena.png": "PK",
   "kasena-prototype.png": "PK",
   "az-learner-pwa.png": "AL",
-  "portfolio.png": "FA",
+  "portfolio.png": "AA",
 };
 
 export default function Projects() {
