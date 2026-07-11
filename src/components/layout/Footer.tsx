@@ -1,9 +1,10 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import type { SocialLink } from "@/types";
 
 const socialLinks: SocialLink[] = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Instagram, href: "https://instagram.com/anim.andrew", label: "Instagram" },
+  { icon: Youtube, href: "https://youtube.com/channel/UCWIOkABSbwlEyaSXBGVHeGg", label: "YouTube" },
+  { icon: Linkedin, href: "https://linkedin.com/in/andy-anim", label: "LinkedIn" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
 ];
 

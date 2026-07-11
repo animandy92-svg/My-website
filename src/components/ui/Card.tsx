@@ -8,7 +8,7 @@ export default function Card({ className, hover = false, children, ...props }: C
   return (
     <div
       className={cn(
-        "bg-white rounded-xl shadow-sm border border-border overflow-hidden",
+        "bg-card rounded-xl shadow-sm border border-border/80 overflow-hidden",
         hover && "transition-all duration-300 hover:shadow-lg hover:-translate-y-1",
         className
       )}

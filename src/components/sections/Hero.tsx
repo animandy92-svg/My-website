@@ -13,9 +13,8 @@ export default function Hero() {
           <span className="text-primary">Andy Anim</span>
         </h1>
         <p className="mb-8 text-lg leading-relaxed text-muted-foreground md:text-xl">
-          A software developer and consultant crafting digital experiences
-          through clean code and thoughtful design. Let&apos;s build something
-          great together.
+          A driven professional combining analytical expertise with real-world
+          business experience. Let&apos;s build something great together.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a href="#projects">
