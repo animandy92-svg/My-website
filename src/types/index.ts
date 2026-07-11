@@ -10,6 +10,7 @@ export interface Service {
   title: string;
   description: string;
   badges: string[];
+  category: "accounting" | "tech";
 }
 
 export interface Project {

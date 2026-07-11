@@ -47,28 +47,28 @@ const experience = [
     company: "AZ Learner",
     period: "Jun 2026 - Present",
     description:
-      "Coordinate research initiatives, gathering, organizing, and analyzing data to inform product and business decisions. Co-develop platform features and processes.",
+      "Coordinate research initiatives across 5+ departments, gathering, organizing, and analyzing data to inform product and business decisions. Co-develop platform features, manage a team of 12 researchers, and deliver insights that drive user growth to 10K+ active students.",
   },
   {
     role: "Chief of Ambassadors (HR Coordination)",
     company: "AZ Learner",
     period: "Jan 2026 - May 2026",
     description:
-      "Recruited, onboarded, and managed a team of brand ambassadors, tracking performance and reporting outcomes to leadership.",
+      "Recruited, onboarded, and managed a team of 20+ brand ambassadors across multiple Ghanaian campuses. Tracked performance metrics, increased campus outreach by 40%, and reported outcomes directly to leadership.",
   },
   {
     role: "Founder & CEO",
     company: "Jack of All Trade iStore",
     period: "2024 - Present",
     description:
-      "Founded and operate an online retail business trading phones, laptops, and accessories, overseeing pricing, inventory, and cash-flow management.",
+      "Founded and scaled an online retail business serving 500+ customers, trading phones, laptops, and accessories. Oversee pricing strategy, inventory management, and cash-flow operations with a Firebase-powered marketplace.",
   },
   {
     role: "Co-Developer",
     company: "Project Kasena (Indigen World)",
     period: "2026",
     description:
-      "Co-developed a community-oriented digital initiative, including contact/data organization and payment strategy planning.",
+      "Co-developed a community-driven digital Kasem dictionary targeting 20,000+ validated entries. Designed micro-payment verification system (GHS 0.50/phrase), coordinated youth contributors and elder validators, and formed a 90-day strategic alliance with Indigen World for Northern Ghana.",
   },
 ];
 
@@ -101,17 +101,40 @@ export default function About() {
 
         <Card className="mb-8">
           <CardContent>
-            <h3 className="mb-3 text-xl font-bold text-foreground">Profile</h3>
-            <p className="leading-relaxed text-muted-foreground">
-              Detail-oriented Bachelor of Commerce (Accounting) student at the
-              University of Cape Coast, combining strong Excel-based analytical
-              skills from coursework in Financial Accounting, Business
-              Statistics, and Corporate Finance with real-world experience in
-              research coordination, business operations, and entrepreneurship.
-              Proven track record managing budgets, records, and cross-functional
-              teams; seeking an accounting or finance internship to apply a
-              rigorous, numbers-driven approach in a professional environment.
-            </p>
+            <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
+              <div className="relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-primary to-primary-light shadow-lg">
+                <img
+                  src="/images/profile/profile.png"
+                  alt="Francis Anim"
+                  className="h-full w-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+                <span className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white/90 select-none">
+                  FA
+                </span>
+              </div>
+              <div className="text-center sm:text-left">
+                <h3 className="mb-1 text-xl font-bold text-foreground">
+                  Francis Anim
+                </h3>
+                <p className="mb-3 text-sm font-medium text-primary">
+                  BCom Accounting Student &amp; Entrepreneur
+                </p>
+                <p className="leading-relaxed text-muted-foreground">
+                  Detail-oriented Bachelor of Commerce (Accounting) student at
+                  the University of Cape Coast, combining strong Excel-based
+                  analytical skills from coursework in Financial Accounting,
+                  Business Statistics, and Corporate Finance with real-world
+                  experience in research coordination, business operations, and
+                  entrepreneurship. Proven track record managing budgets,
+                  records, and cross-functional teams; seeking an accounting or
+                  finance internship to apply a rigorous, numbers-driven
+                  approach in a professional environment.
+                </p>
+              </div>
+            </div>
           </CardContent>
         </Card>
 
