@@ -6,9 +6,9 @@ import Services from "@/components/sections/Services";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 
-export default function Home() {
+export default function App() {
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
         <Hero />
@@ -18,6 +18,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
