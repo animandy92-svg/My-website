@@ -9,7 +9,7 @@ export default function Card({ className, hover = false, children, ...props }: C
     <div
       className={cn(
         "bg-card rounded-xl shadow-sm border border-border/80 overflow-hidden",
-        hover && "transition-all duration-300 hover:shadow-lg hover:-translate-y-1",
+        hover && "transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary/30",
         className
       )}
       {...props}

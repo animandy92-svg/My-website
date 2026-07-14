@@ -11,6 +11,7 @@ import {
 import SectionHeader from "@/components/ui/SectionHeader";
 import Card, { CardContent } from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
+import { useInView } from "@/hooks/useInView";
 import type { Service } from "@/types";
 
 const services: Service[] = [
@@ -81,6 +82,9 @@ const services: Service[] = [
 ];
 
 export default function Services() {
+  const { ref: accRef, isInView: accInView } = useInView();
+  const { ref: techRef, isInView: techInView } = useInView();
+
   return (
     <section id="services" className="bg-muted/30 px-6 py-24">
       <div className="mx-auto max-w-6xl">
@@ -88,17 +92,20 @@ export default function Services() {
           title="Services"
           subtitle="What I can do for you — from financial clarity to digital solutions."
         />
-        <div className="mb-10">
+        <div ref={accRef} className={`mb-10 ${accInView ? "animate-fade-in-up" : "opacity-0"}`}>
           <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-primary">
             Accounting & Finance
           </h3>
           <div className="grid gap-6 sm:grid-cols-2">
             {services
               .filter((s) => s.category === "accounting")
-              .map((service) => (
+              .map((service, index) => (
                 <Card key={service.title} hover>
                   <CardContent>
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <div
+                      className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-transform duration-300 hover:scale-110"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
                       <service.icon size={24} />
                     </div>
                     <h3 className="mb-2 text-lg font-semibold text-foreground">
@@ -119,17 +126,20 @@ export default function Services() {
               ))}
           </div>
         </div>
-        <div>
+        <div ref={techRef} className={techInView ? "animate-fade-in-up" : "opacity-0"}>
           <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-accent">
             Technology & Development
           </h3>
           <div className="grid gap-6 sm:grid-cols-2">
             {services
               .filter((s) => s.category === "tech")
-              .map((service) => (
+              .map((service, index) => (
                 <Card key={service.title} hover>
                   <CardContent>
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                    <div
+                      className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent transition-transform duration-300 hover:scale-110"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
                       <service.icon size={24} />
                     </div>
                     <h3 className="mb-2 text-lg font-semibold text-foreground">

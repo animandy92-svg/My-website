@@ -2,6 +2,7 @@ import { ExternalLink } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Card, { CardContent } from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
+import { useInView } from "@/hooks/useInView";
 import type { Project } from "@/types";
 
 const projects: Project[] = [
@@ -74,6 +75,8 @@ const initials: Record<string, string> = {
 };
 
 export default function Projects() {
+  const { ref, isInView } = useInView();
+
   return (
     <section id="projects" className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
@@ -81,7 +84,10 @@ export default function Projects() {
           title="Projects"
           subtitle="A selection of my real work — from student platforms to cultural preservation."
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          ref={ref}
+          className={`grid gap-6 sm:grid-cols-2 lg:grid-cols-3 ${isInView ? "stagger-children" : ""}`}
+        >
           {projects.map((project) => {
             const slug = project.image?.split("/").pop() ?? "";
             const gradient = gradients[slug] ?? "from-primary/60 to-primary/80";
@@ -89,11 +95,11 @@ export default function Projects() {
 
             return (
               <Card key={project.title} hover>
-                <div className={`relative h-40 bg-gradient-to-br ${gradient} flex items-center justify-center`}>
+                <div className={`relative h-40 bg-gradient-to-br ${gradient} flex items-center justify-center overflow-hidden`}>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 hover:scale-110"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";
                     }}
@@ -112,7 +118,7 @@ export default function Projects() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground transition-colors hover:text-primary"
+                        className="text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-110"
                         aria-label={`View ${project.title}`}
                       >
                         <ExternalLink size={16} />

@@ -21,11 +21,14 @@ export default function SectionHeader({
         className
       )}
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+      <h2 className={cn(
+        "text-3xl md:text-4xl font-bold text-foreground mb-4",
+        centered && "accent-underline"
+      )}>
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-6">
           {subtitle}
         </p>
       )}
