@@ -71,17 +71,17 @@ const initials: Record<string, string> = {
   "kasena.png": "PK",
   "kasena-prototype.png": "PK",
   "az-learner-pwa.png": "AL",
-  "portfolio.png": "AA",
+  "portfolio.png": "FP",
 };
 
-export default function Projects() {
+export default function Work() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="projects" className="px-6 py-24">
+    <section id="work" className="bg-muted/30 px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
-          title="Projects"
+          title="Work"
           subtitle="A selection of my real work — from student platforms to cultural preservation."
         />
         <div

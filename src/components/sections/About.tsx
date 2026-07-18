@@ -100,7 +100,7 @@ export default function About() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           title="About Me"
-          subtitle="Detail-oriented accounting student combining analytical skills with real-world business experience."
+          subtitle="Tourism professional combining analytical skills with real-world business experience in education and technology."
         />
 
         <div
@@ -131,33 +131,30 @@ export default function About() {
                 <div className="relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-primary to-primary-light shadow-lg ring-4 ring-primary/10">
                   <img
                     src="/images/profile/profile.png"
-                    alt="Andy Anim"
+                    alt="Francis Pwavwe"
                     className="h-full w-full object-cover"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";
                     }}
                   />
                   <span className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white/90 select-none">
-                    AA
+                    FP
                   </span>
                 </div>
                 <div className="text-center sm:text-left">
                   <h3 className="mb-1 text-xl font-bold text-foreground">
-                    Andy Anim
+                    Francis Pwavwe
                   </h3>
                   <p className="mb-3 text-sm font-medium text-primary">
-                    BCom Accounting Student &amp; Entrepreneur
+                    Tourism Professional &amp; Entrepreneur
                   </p>
                   <p className="leading-relaxed text-muted-foreground">
-                    Detail-oriented Bachelor of Commerce (Accounting) student at
-                    the University of Cape Coast, combining strong Excel-based
-                    analytical skills from coursework in Financial Accounting,
-                    Business Statistics, and Corporate Finance with real-world
-                    experience in research coordination, business operations, and
-                    entrepreneurship. Proven track record managing budgets,
-                    records, and cross-functional teams; seeking an accounting or
-                    finance internship to apply a rigorous, numbers-driven
-                    approach in a professional environment.
+                    Detail-oriented Tourism Management student at the University
+                    of Cape Coast, combining strong analytical skills with
+                    real-world experience in research coordination, business
+                    operations, and entrepreneurship. Proven track record
+                    managing budgets, records, and cross-functional teams across
+                    education technology and digital innovation projects.
                   </p>
                 </div>
               </div>
@@ -184,7 +181,7 @@ export default function About() {
                   }}
                 />
                 <div>
-                  <p className="font-semibold text-foreground">BCom, Accounting</p>
+                  <p className="font-semibold text-foreground">BSc, Tourism Management</p>
                   <a
                     href="https://ucc.edu.gh/"
                     target="_blank"
