@@ -34,6 +34,12 @@ const milestones = [
   },
 ];
 
+const summaryPoints = [
+  "Built ventures and digital products with measurable community impact",
+  "Combined leadership, research, and execution across education and tech",
+  "Focused on long-term systems rather than short-term trends",
+];
+
 export default function Journey() {
   const { ref, isInView } = useInView();
 
@@ -44,6 +50,19 @@ export default function Journey() {
           title="Journey"
           subtitle="Key milestones shaping my path in education, technology, and tourism."
         />
+
+        <div className="mb-8 rounded-[24px] border border-border/70 bg-muted/30 p-6 shadow-sm">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">
+            What this path has taught me
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            {summaryPoints.map((point) => (
+              <div key={point} className="rounded-2xl border border-border/70 bg-background/70 p-4 text-sm text-muted-foreground">
+                {point}
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div ref={ref} className={`space-y-6 ${isInView ? "stagger-children" : ""}`}>
           {milestones.map((item, index) => (

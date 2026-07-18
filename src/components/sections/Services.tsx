@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Globe,
   Smartphone,
@@ -81,9 +82,24 @@ const services: Service[] = [
   },
 ];
 
+const tabs = [
+  { label: "All Services", value: "all" },
+  { label: "Accounting & Finance", value: "accounting" },
+  { label: "Technology & Development", value: "tech" },
+] as const;
+
 export default function Services() {
   const { ref: accRef, isInView: accInView } = useInView();
   const { ref: techRef, isInView: techInView } = useInView();
+  const [activeTab, setActiveTab] = useState<(typeof tabs)[number]["value"]>("all");
+
+  const visibleServices =
+    activeTab === "all"
+      ? services
+      : services.filter((service) => service.category === activeTab);
+
+  const visibleAccounting = visibleServices.filter((service) => service.category === "accounting");
+  const visibleTech = visibleServices.filter((service) => service.category === "tech");
 
   return (
     <section id="services" className="bg-muted/30 px-6 py-24">
@@ -92,14 +108,31 @@ export default function Services() {
           title="Services"
           subtitle="What I can do for you — from financial clarity to digital solutions."
         />
-        <div ref={accRef} className={`mb-10 ${accInView ? "animate-fade-in-up" : "opacity-0"}`}>
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-primary">
-            Accounting & Finance
-          </h3>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {services
-              .filter((s) => s.category === "accounting")
-              .map((service, index) => (
+
+        <div className="mb-8 flex flex-wrap gap-3">
+          {tabs.map((tab) => (
+            <button
+              key={tab.value}
+              type="button"
+              onClick={() => setActiveTab(tab.value)}
+              className={`rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 ${
+                activeTab === tab.value
+                  ? "border-primary bg-primary text-white shadow-sm"
+                  : "border-border bg-background text-muted-foreground hover:border-primary hover:text-primary"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {(activeTab === "all" || activeTab === "accounting") && (
+          <div ref={accRef} className={`mb-10 ${accInView ? "animate-fade-in-up" : "opacity-0"}`}>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-primary">
+              Accounting & Finance
+            </h3>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {visibleAccounting.map((service, index) => (
                 <Card key={service.title} hover>
                   <CardContent>
                     <div
@@ -108,12 +141,8 @@ export default function Services() {
                     >
                       <service.icon size={24} />
                     </div>
-                    <h3 className="mb-2 text-lg font-semibold text-foreground">
-                      {service.title}
-                    </h3>
-                    <p className="mb-4 text-sm text-muted-foreground">
-                      {service.description}
-                    </p>
+                    <h3 className="mb-2 text-lg font-semibold text-foreground">{service.title}</h3>
+                    <p className="mb-4 text-sm text-muted-foreground">{service.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {service.badges.map((badge) => (
                         <Badge key={badge} variant="primary">
@@ -124,16 +153,17 @@ export default function Services() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
           </div>
-        </div>
-        <div ref={techRef} className={techInView ? "animate-fade-in-up" : "opacity-0"}>
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-accent">
-            Technology & Development
-          </h3>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {services
-              .filter((s) => s.category === "tech")
-              .map((service, index) => (
+        )}
+
+        {(activeTab === "all" || activeTab === "tech") && (
+          <div ref={techRef} className={techInView ? "animate-fade-in-up" : "opacity-0"}>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-accent">
+              Technology & Development
+            </h3>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {visibleTech.map((service, index) => (
                 <Card key={service.title} hover>
                   <CardContent>
                     <div
@@ -142,12 +172,8 @@ export default function Services() {
                     >
                       <service.icon size={24} />
                     </div>
-                    <h3 className="mb-2 text-lg font-semibold text-foreground">
-                      {service.title}
-                    </h3>
-                    <p className="mb-4 text-sm text-muted-foreground">
-                      {service.description}
-                    </p>
+                    <h3 className="mb-2 text-lg font-semibold text-foreground">{service.title}</h3>
+                    <p className="mb-4 text-sm text-muted-foreground">{service.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {service.badges.map((badge) => (
                         <Badge key={badge} variant="accent">
@@ -158,8 +184,9 @@ export default function Services() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

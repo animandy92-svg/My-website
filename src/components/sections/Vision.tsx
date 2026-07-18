@@ -59,6 +59,20 @@ export default function Vision() {
                     communities and empowers the next generation of African
                     leaders.
                   </p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {[
+                      "100K+ students",
+                      "10+ countries",
+                      "3 focus pillars",
+                    ].map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-primary/20 bg-background/80 px-3 py-2 text-sm font-medium text-primary"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </CardContent>

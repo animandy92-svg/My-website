@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Card, { CardContent } from "@/components/ui/Card";
@@ -13,6 +14,7 @@ const projects: Project[] = [
     tags: ["React", "Firebase", "Android", "PWA"],
     link: "https://azlearner.me/",
     image: "/images/projects/az-learner.png",
+    category: "digital",
   },
   {
     title: "Jack of All Trade iStore",
@@ -21,6 +23,7 @@ const projects: Project[] = [
     tags: ["Firebase", "React", "E-Commerce"],
     link: "https://jack-of-all-trades-marketplace.web.app/",
     image: "/images/projects/istore.png",
+    category: "digital",
   },
   {
     title: "Project Kasena",
@@ -29,6 +32,7 @@ const projects: Project[] = [
     tags: ["React", "Firebase", "AI/ML", "Community"],
     link: "https://kassena.azlearner.me/",
     image: "/images/projects/kasena.png",
+    category: "community",
   },
   {
     title: "Project Kasena Prototype",
@@ -37,6 +41,7 @@ const projects: Project[] = [
     tags: ["Figma", "UI/UX", "Mobile-First"],
     link: "https://waffle-taffy-61548237.figma.site/",
     image: "/images/projects/kasena-prototype.png",
+    category: "prototype",
   },
   {
     title: "AZ Learner Web App",
@@ -45,6 +50,7 @@ const projects: Project[] = [
     tags: ["React", "PWA", "Firebase"],
     link: "https://azlearner.me/pwa/index.html",
     image: "/images/projects/az-learner-pwa.png",
+    category: "digital",
   },
   {
     title: "Portfolio Website",
@@ -53,8 +59,16 @@ const projects: Project[] = [
     tags: ["React", "TypeScript", "Tailwind", "Vite"],
     link: "https://andyanim.com",
     image: "/images/projects/portfolio.png",
+    category: "prototype",
   },
 ];
+
+const tabs = [
+  { label: "All", value: "all" },
+  { label: "Digital Products", value: "digital" },
+  { label: "Community & Culture", value: "community" },
+  { label: "Design Prototypes", value: "prototype" },
+] as const;
 
 const gradients: Record<string, string> = {
   "az-learner.png": "from-blue-500 to-blue-700",
@@ -76,6 +90,12 @@ const initials: Record<string, string> = {
 
 export default function Work() {
   const { ref, isInView } = useInView();
+  const [activeTab, setActiveTab] = useState<(typeof tabs)[number]["value"]>("all");
+
+  const visibleProjects =
+    activeTab === "all"
+      ? projects
+      : projects.filter((project) => project.category === activeTab);
 
   return (
     <section id="work" className="bg-muted/30 px-6 py-24">
@@ -84,18 +104,36 @@ export default function Work() {
           title="Work"
           subtitle="A selection of my real work — from student platforms to cultural preservation."
         />
+
+        <div className="mb-8 flex flex-wrap gap-3">
+          {tabs.map((tab) => (
+            <button
+              key={tab.value}
+              type="button"
+              onClick={() => setActiveTab(tab.value)}
+              className={`rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 ${
+                activeTab === tab.value
+                  ? "border-primary bg-primary text-white shadow-sm"
+                  : "border-border bg-background text-muted-foreground hover:border-primary hover:text-primary"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
         <div
           ref={ref}
           className={`grid gap-6 sm:grid-cols-2 lg:grid-cols-3 ${isInView ? "stagger-children" : ""}`}
         >
-          {projects.map((project) => {
+          {visibleProjects.map((project) => {
             const slug = project.image?.split("/").pop() ?? "";
             const gradient = gradients[slug] ?? "from-primary/60 to-primary/80";
             const init = initials[slug] ?? project.title.charAt(0);
 
             return (
               <Card key={project.title} hover>
-                <div className={`relative h-40 bg-gradient-to-br ${gradient} flex items-center justify-center overflow-hidden`}>
+                <div className={`relative flex h-40 items-center justify-center overflow-hidden bg-gradient-to-br ${gradient}`}>
                   <img
                     src={project.image}
                     alt={project.title}
@@ -104,30 +142,26 @@ export default function Work() {
                       (e.target as HTMLImageElement).style.display = "none";
                     }}
                   />
-                  <span className="relative text-3xl font-bold text-white/80 select-none">
+                  <span className="relative select-none text-3xl font-bold text-white/80">
                     {init}
                   </span>
                 </div>
                 <CardContent className="flex flex-col">
                   <div className="mb-2 flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {project.title}
-                    </h3>
+                    <h3 className="text-lg font-semibold text-foreground">{project.title}</h3>
                     {project.link && (
                       <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-110"
+                        className="text-muted-foreground transition-all duration-200 hover:scale-110 hover:text-primary"
                         aria-label={`View ${project.title}`}
                       >
                         <ExternalLink size={16} />
                       </a>
                     )}
                   </div>
-                  <p className="mb-4 flex-1 text-sm text-muted-foreground">
-                    {project.description}
-                  </p>
+                  <p className="mb-4 flex-1 text-sm text-muted-foreground">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <Badge key={tag} variant="secondary">

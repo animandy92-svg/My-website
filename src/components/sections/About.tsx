@@ -43,6 +43,12 @@ const skills = [
   "Team Leadership & Communication",
 ];
 
+const quickFacts = [
+  "Research-led thinking",
+  "Student-first impact",
+  "Entrepreneurial execution",
+];
+
 const experience = [
   {
     role: "Research Coordinator & Co-Developer",
@@ -102,6 +108,32 @@ export default function About() {
           title="About Me"
           subtitle="Tourism professional combining analytical skills with real-world business experience in education and technology."
         />
+
+        <div className="mb-10 rounded-[28px] border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-accent/5 p-6 shadow-sm sm:p-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">
+                At a glance
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold text-foreground">
+                I build practical systems where strategy, people, and technology meet.
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                My work is grounded in research, leadership, and execution — whether I am supporting students through digital tools, building ventures, or shaping tourism and education experiences that create long-term value.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {quickFacts.map((fact) => (
+                <span
+                  key={fact}
+                  className="rounded-full border border-primary/20 bg-background/80 px-3 py-2 text-sm font-medium text-primary"
+                >
+                  {fact}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
 
         <div
           ref={highlightsRef}

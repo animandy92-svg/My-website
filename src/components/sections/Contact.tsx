@@ -1,10 +1,31 @@
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { Send, Mail, Linkedin, MapPin, Clock3 } from "lucide-react";
 import Card, { CardContent } from "@/components/ui/Card";
 import Input from "@/components/ui/Input";
 import TextArea from "@/components/ui/TextArea";
 import Button from "@/components/ui/Button";
 import { useInView } from "@/hooks/useInView";
+
+const contactMethods = [
+  {
+    icon: Mail,
+    title: "Email",
+    value: "francis@pwavwe.com",
+    href: "mailto:francis@pwavwe.com",
+  },
+  {
+    icon: Linkedin,
+    title: "LinkedIn",
+    value: "Connect with me",
+    href: "https://linkedin.com/in/francis-pwavwe",
+  },
+  {
+    icon: MapPin,
+    title: "Location",
+    value: "Cape Coast, Ghana",
+    href: "#hero",
+  },
+];
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -27,7 +48,7 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-muted/30 px-6 py-24">
       <div ref={ref} className={`mx-auto max-w-2xl ${isInView ? "animate-fade-in-up" : "opacity-0"}`}>
-        <div className="mb-12">
+        <div className="mb-8">
           <div className="mb-4 flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
             <span className="font-mono text-sm text-muted-foreground">
@@ -35,12 +56,32 @@ export default function Contact() {
             </span>
           </div>
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
-            Let&apos;s build something.
+            Let&apos;s build something meaningful.
           </h2>
           <p className="text-lg text-muted-foreground">
-            Got a project, a collaboration, or just an idea worth talking
-            through? Send a message and I&apos;ll get back to you.
+            Whether it is a product idea, a student-focused platform, or a tourism initiative, I am always open to conversations with people building real impact.
           </p>
+        </div>
+
+        <div className="mb-6 grid gap-3 sm:grid-cols-3">
+          {contactMethods.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={item.title}
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="rounded-2xl border border-border/70 bg-background/80 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-sm"
+              >
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Icon size={18} />
+                </div>
+                <p className="text-sm font-semibold text-foreground">{item.title}</p>
+                <p className="mt-1 text-sm text-muted-foreground">{item.value}</p>
+              </a>
+            );
+          })}
         </div>
 
         <Card>
@@ -106,14 +147,15 @@ export default function Contact() {
                     maxLength={MAX_MESSAGE_LENGTH}
                   />
                 </div>
-                <div className="flex items-center justify-between pt-2">
+                <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
                   <Button type="submit" size="lg">
                     Send message
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
-                  <span className="font-mono text-sm text-muted-foreground">
-                    {">"} ready to send
-                  </span>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Clock3 size={16} className="text-primary" />
+                    <span className="font-mono">usually replies within 1-2 days</span>
+                  </div>
                 </div>
               </form>
             )}
