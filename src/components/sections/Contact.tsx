@@ -10,14 +10,14 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    value: "francis@pwavwe.com",
-    href: "mailto:francis@pwavwe.com",
+    value: "andy@example.com",
+    href: "mailto:andy@example.com",
   },
   {
     icon: Linkedin,
     title: "LinkedIn",
     value: "Connect with me",
-    href: "https://linkedin.com/in/francis-pwavwe",
+    href: "https://linkedin.com/in/andy-anim",
   },
   {
     icon: MapPin,
@@ -59,7 +59,7 @@ export default function Contact() {
             Let&apos;s build something meaningful.
           </h2>
           <p className="text-lg text-muted-foreground">
-            Whether it is a product idea, a student-focused platform, or a tourism initiative, I am always open to conversations with people building real impact.
+            Whether it is a product idea, a student-focused platform, or a finance initiative, I am always open to conversations with people building real impact.
           </p>
         </div>
 

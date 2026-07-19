@@ -6,7 +6,7 @@ const pillars = [
   {
     icon: Compass,
     title: "Strategy",
-    description: "Turning ideas into practical growth plans for tourism, education, and digital ventures.",
+    description: "Turning ideas into practical growth plans for accounting, education, and digital ventures.",
   },
   {
     icon: Brain,

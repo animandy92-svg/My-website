@@ -12,11 +12,11 @@ const insights = [
     tag: "EdTech",
   },
   {
-    title: "Tourism Strategy for Emerging Markets",
+    title: "Financial Strategy for Emerging Markets",
     date: "2026",
     excerpt:
-      "Building sustainable tourism frameworks that leverage local culture, digital platforms, and community engagement.",
-    tag: "Tourism",
+      "Building sustainable financial frameworks that leverage local culture, digital platforms, and community engagement.",
+    tag: "Finance",
   },
   {
     title: "Community-Driven Language Preservation",
@@ -35,7 +35,7 @@ export default function Insights() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           title="Insights"
-          subtitle="Thoughts on education, tourism, technology, and building for impact."
+          subtitle="Thoughts on education, finance, technology, and building for impact."
         />
 
         <div

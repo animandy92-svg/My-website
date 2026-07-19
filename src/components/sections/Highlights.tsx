@@ -13,7 +13,7 @@ const highlights = [
   },
   {
     title: "Cross-sector perspective",
-    description: "Tourism, education, technology, and leadership all inform the way I build and advise.",
+    description: "Finance, education, technology, and leadership all inform the way I build and advise.",
   },
 ];
 

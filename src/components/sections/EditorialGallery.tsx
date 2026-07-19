@@ -20,9 +20,9 @@ const galleryItems = [
     gradient: "from-blue-500 to-blue-700",
   },
   {
-    title: "Tourism Strategy",
-    image: "/images/gallery/tourism-strategy.jpg",
-    initials: "TS",
+    title: "Financial Strategy",
+    image: "/images/gallery/financial-strategy.jpg",
+    initials: "FS",
     gradient: "from-amber-600 to-amber-800",
   },
 ];

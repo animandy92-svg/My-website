@@ -58,8 +58,8 @@ export default function Header() {
           href="#hero"
           className="text-xl font-bold tracking-[0.2em] text-foreground transition-colors duration-200 hover:text-primary"
         >
-          <span className="font-extrabold">FRANCIS</span>{" "}
-          <span className="font-extrabold text-primary">PWAVWE</span>
+          <span className="font-extrabold">ANDY</span>{" "}
+          <span className="font-extrabold text-primary">ANIM</span>
         </a>
 
         <nav className="hidden items-center gap-2 rounded-full border border-border/70 bg-background/70 px-3 py-2 shadow-sm xl:flex">
@@ -88,14 +88,14 @@ export default function Header() {
             {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
           </button>
           <a
-            href="mailto:francis@example.com"
+            href="mailto:andy@example.com"
             className="hidden items-center justify-center rounded-full border border-border p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground sm:inline-flex"
             aria-label="Email"
           >
             <Mail size={16} />
           </a>
           <a
-            href="https://linkedin.com/in/francis-pwavwe"
+            href="https://linkedin.com/in/andy-anim"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden items-center justify-center rounded-full border border-border p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground sm:inline-flex"

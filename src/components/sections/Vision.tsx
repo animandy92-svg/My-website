@@ -12,9 +12,9 @@ const goals = [
   },
   {
     icon: BookOpen,
-    title: "Digital Tourism for Ghana",
+    title: "Digital Finance for Ghana",
     description:
-      "Build technology-driven tourism solutions that showcase Ghana's culture, heritage, and hospitality to the world.",
+      "Build technology-driven financial solutions that improve access, transparency, and opportunity across Ghana.",
   },
   {
     icon: Users,
@@ -51,10 +51,10 @@ export default function Vision() {
                     My Vision
                   </h3>
                   <p className="text-base leading-relaxed text-muted-foreground">
-                    To bridge the gap between education, technology, and tourism
+                    To bridge the gap between education, technology, and finance
                     in Africa — building purposeful systems that elevate
-                    academic performance, preserve cultural heritage, and
-                    redefine strategic possibilities across the continent. I
+                    academic performance, improve access to financial services,
+                    and redefine strategic possibilities across the continent. I
                     believe in creating digital public value that serves
                     communities and empowers the next generation of African
                     leaders.

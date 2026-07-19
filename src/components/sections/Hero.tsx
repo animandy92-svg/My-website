@@ -9,7 +9,7 @@ const stats = [
   { value: "5", label: "Awards" },
 ];
 
-const focusTags = ["Tourism Strategy", "Education Technology", "Campus Leadership"];
+const focusTags = ["Financial Reporting", "Education Technology", "Campus Leadership"];
 const highlights = ["Student-first systems", "Strategic growth", "Digital public value"];
 
 export default function Hero() {
@@ -33,24 +33,28 @@ export default function Hero() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/80 px-4 py-2 shadow-sm backdrop-blur">
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
             <span className="font-mono text-xs uppercase tracking-[0.24em] text-muted-foreground">
-              Tourism Management · University of Cape Coast · Ghana
+              Accounting & Finance · University of Cape Coast · Ghana
             </span>
           </div>
 
           <h1 className="mb-4 text-5xl font-black leading-[0.95] tracking-tight text-foreground sm:text-6xl md:text-7xl">
-            Francis
+            Andy
             <br />
-            <span className="text-primary">Pwavwe</span>
+            <span className="text-primary">Anim</span>
           </h1>
 
           <p className="mb-4 text-xl font-semibold text-primary sm:text-2xl">
-            Tourism professional · digital strategist · builder of student-first systems
+            Accounting student · digital strategist · builder of student-first systems
           </p>
 
           <p className="mb-8 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
-            I design thoughtful digital experiences at the intersection of tourism,
+            I design thoughtful digital experiences at the intersection of finance,
             education, and public impact — turning complex ideas into practical,
             high-value solutions for communities and institutions.
+          </p>
+
+          <p className="mb-8 max-w-2xl text-sm font-medium text-primary">
+            Changed and improved — the latest code updates are live.
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
@@ -89,7 +93,7 @@ export default function Hero() {
               <div className="aspect-[4/5] overflow-hidden rounded-[22px] bg-gradient-to-br from-primary/30 via-white to-accent/20">
                 <img
                   src="/images/profile/profile.png"
-                  alt="Francis Pwavwe"
+                  alt="Andy Anim"
                   className="h-full w-full object-cover transition duration-700 hover:scale-105"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
@@ -102,7 +106,7 @@ export default function Hero() {
                   Focused On
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  education systems, tourism strategy, and digital public value.
+                  education systems, financial strategy, and digital public value.
                 </p>
               </div>
             </div>

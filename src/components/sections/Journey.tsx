@@ -48,7 +48,7 @@ export default function Journey() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           title="Journey"
-          subtitle="Key milestones shaping my path in education, technology, and tourism."
+          subtitle="Key milestones shaping my path in education, technology, and finance."
         />
 
         <div className="mb-8 rounded-[24px] border border-border/70 bg-muted/30 p-6 shadow-sm">

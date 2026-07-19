@@ -106,7 +106,7 @@ export default function About() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           title="About Me"
-          subtitle="Tourism professional combining analytical skills with real-world business experience in education and technology."
+          subtitle="Accounting student combining analytical skills with real-world business experience in education and financial technology."
         />
 
         <div className="mb-10 rounded-[28px] border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-accent/5 p-6 shadow-sm sm:p-8">
@@ -119,7 +119,7 @@ export default function About() {
                 I build practical systems where strategy, people, and technology meet.
               </h3>
               <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                My work is grounded in research, leadership, and execution — whether I am supporting students through digital tools, building ventures, or shaping tourism and education experiences that create long-term value.
+                My work is grounded in research, leadership, and execution — whether I am supporting students through digital tools, building ventures, or shaping finance and education experiences that create long-term value.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -163,30 +163,30 @@ export default function About() {
                 <div className="relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-primary to-primary-light shadow-lg ring-4 ring-primary/10">
                   <img
                     src="/images/profile/profile.png"
-                    alt="Francis Pwavwe"
+                    alt="Andy Anim"
                     className="h-full w-full object-cover"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";
                     }}
                   />
                   <span className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white/90 select-none">
-                    FP
+                    AA
                   </span>
                 </div>
                 <div className="text-center sm:text-left">
                   <h3 className="mb-1 text-xl font-bold text-foreground">
-                    Francis Pwavwe
+                    Andy Anim
                   </h3>
                   <p className="mb-3 text-sm font-medium text-primary">
-                    Tourism Professional &amp; Entrepreneur
+                    Accounting Student &amp; Entrepreneur
                   </p>
                   <p className="leading-relaxed text-muted-foreground">
-                    Detail-oriented Tourism Management student at the University
-                    of Cape Coast, combining strong analytical skills with
-                    real-world experience in research coordination, business
-                    operations, and entrepreneurship. Proven track record
-                    managing budgets, records, and cross-functional teams across
-                    education technology and digital innovation projects.
+                    Detail-oriented Accounting student at the University of Cape
+                    Coast, combining strong analytical skills with real-world
+                    experience in research coordination, business operations,
+                    and entrepreneurship. Proven track record managing budgets,
+                    records, and cross-functional teams across education
+                    technology and financial innovation projects.
                   </p>
                 </div>
               </div>
@@ -213,7 +213,7 @@ export default function About() {
                   }}
                 />
                 <div>
-                  <p className="font-semibold text-foreground">BSc, Tourism Management</p>
+                  <p className="font-semibold text-foreground">BSc, Accounting</p>
                   <a
                     href="https://ucc.edu.gh/"
                     target="_blank"
