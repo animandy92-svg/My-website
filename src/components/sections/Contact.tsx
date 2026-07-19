@@ -22,7 +22,7 @@ const contactMethods = [
   {
     icon: MapPin,
     title: "Location",
-    value: "Cape Coast, Ghana",
+    value: "Accra, Ghana",
     href: "#hero",
   },
 ];

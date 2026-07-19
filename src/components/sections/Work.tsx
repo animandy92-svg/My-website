@@ -13,7 +13,8 @@ const projects: Project[] = [
       "Student companion app for UCC & Ghana universities — smart print queue, course circles, GPA calculator, exam countdown, campus navigation, and AI-powered CV builder. Serving 10K+ active students with a 4.8★ Play Store rating.",
     tags: ["React", "Firebase", "Android", "PWA"],
     link: "https://azlearner.me/",
-    image: "/images/projects/az-learner.png",
+    image: "https://azlearner.me/brand.png",
+    imageName: "brand.png",
     category: "digital",
   },
   {
@@ -22,7 +23,8 @@ const projects: Project[] = [
       "Online retail marketplace trading phones, laptops, and accessories with real-time inventory tracking, pricing management, and cash-flow operations.",
     tags: ["Firebase", "React", "E-Commerce"],
     link: "https://jack-of-all-trades-marketplace.web.app/",
-    image: "/images/projects/istore.png",
+    image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgNzAiIGZpbGw9Im5vbmUiPgogIDwhLS0gU2hvcHBpbmcgYmFncyBpY29uIC0gbGVmdCBzaWRlIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwLCA1KSI+CiAgICA8IS0tIEJhY2sgYmFnIC0tPgogICAgPHJlY3QgeD0iMjAiIHk9IjEyIiB3aWR0aD0iMjgiIGhlaWdodD0iMzIiIHJ4PSIyIiBzdHJva2U9IiM5RDE3NEQiIHN0cm9rZS13aWR0aD0iMS4yIiBmaWxsPSJub25lIi8+CiAgICA8cGF0aCBkPSJNMjYgMTIgVjggQzI2IDQgMjkgMSAzNCAxIEMzOSAxIDQyIDQgNDIgOCBWMTIiIHN0cm9rZT0iIzlEMTc0RCIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiLz4KICAgIDwhLS0gRnJvbnQgYmFnIC0tPgogICAgPHJlY3QgeD0iNiIgeT0iMjAiIHdpZHRoPSIyOCIgaGVpZ2h0PSIzMiIgcng9IjIiIHN0cm9rZT0iIzlEMTc0RCIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiLz4KICAgIDxwYXRoIGQ9Ik0xMiAyMCBWMTYgQzEyIDEyIDE1IDkgMjAgOSBDMjUgOSAyOCAxMiAyOCAxNiBWMjAiIHN0cm9rZT0iIzlEMTc0RCIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiLz4KICAgIDwhLS0gU21pbGV5IG9uIGZyb250IGJhZyAtLT4KICAgIDxjaXJjbGUgY3g9IjE0IiBjeT0iMzQiIHI9IjEuNSIgZmlsbD0iIzlEMTc0RCIvPgogICAgPGNpcmNsZSBjeD0iMjQiIGN5PSIzNCIgcj0iMS41IiBmaWxsPSIjOUQxNzREIi8+CiAgICA8cGF0aCBkPSJNMTMgMzkgQzEzIDQyIDI1IDQyIDI1IDM5IiBzdHJva2U9IiM5RDE3NEQiIHN0cm9rZS13aWR0aD0iMS4yIiBmaWxsPSJub25lIi8+CiAgPC9nPgogIDwhLS0gQnJhbmQgbmFtZSAtIHJpZ2h0IHNpZGUgLS0+CiAgPHRleHQgeD0iNzAiIHk9IjM4IiBmb250LWZhbWlseT0iR2VvcmdpYSwgc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMTExODI3Ij5KYWNrIG9mIGFsbCBUcmFkZXM8L3RleHQ+CiAgPCEtLSBUYWdsaW5lIC0tPgogIDx0ZXh0IHg9IjcwIiB5PSI1NiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjkiIGxldHRlci1zcGFjaW5nPSIzIiBmaWxsPSIjNkI3MjgwIj5EUkVBTSBJVCwgT1dOIElULjwvdGV4dD4KPC9zdmc+Cg==",
+    imageName: "joat.svg",
     category: "digital",
   },
   {
@@ -31,7 +33,8 @@ const projects: Project[] = [
       "Digital Kasem dictionary & language preservation platform — community-driven corpus targeting 20K+ validated entries, micro-payment verification (GHS 0.50/phrase), and a 3-phase roadmap from dictionary to voice AI. Strategic alliance with Indigen World.",
     tags: ["React", "Firebase", "AI/ML", "Community"],
     link: "https://kassena.azlearner.me/",
-    image: "/images/projects/kasena.png",
+    image: "https://kassena.azlearner.me/assets/project-kasena-logo.png",
+    imageName: "project-kasena-logo.png",
     category: "community",
   },
   {
@@ -71,18 +74,18 @@ const tabs = [
 ] as const;
 
 const gradients: Record<string, string> = {
-  "az-learner.png": "from-blue-500 to-blue-700",
-  "istore.png": "from-emerald-500 to-emerald-700",
-  "kasena.png": "from-amber-500 to-amber-700",
+  "brand.png": "from-blue-500 to-blue-700",
+  "joat.svg": "from-emerald-500 to-emerald-700",
+  "project-kasena-logo.png": "from-amber-500 to-amber-700",
   "kasena-prototype.png": "from-orange-400 to-orange-600",
   "az-learner-pwa.png": "from-sky-400 to-sky-600",
   "portfolio.png": "from-slate-600 to-slate-800",
 };
 
 const initials: Record<string, string> = {
-  "az-learner.png": "AL",
-  "istore.png": "JoAT",
-  "kasena.png": "PK",
+  "brand.png": "AL",
+  "joat.svg": "JoAT",
+  "project-kasena-logo.png": "PK",
   "kasena-prototype.png": "PK",
   "az-learner-pwa.png": "AL",
   "portfolio.png": "FP",
@@ -127,7 +130,7 @@ export default function Work() {
           className={`grid gap-6 sm:grid-cols-2 lg:grid-cols-3 ${isInView ? "stagger-children" : ""}`}
         >
           {visibleProjects.map((project) => {
-            const slug = project.image?.split("/").pop() ?? "";
+            const slug = project.imageName ?? project.image?.split("/").pop() ?? "";
             const gradient = gradients[slug] ?? "from-primary/60 to-primary/80";
             const init = initials[slug] ?? project.title.charAt(0);
 

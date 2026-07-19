@@ -19,6 +19,7 @@ export interface Project {
   tags: string[];
   link?: string;
   image?: string;
+  imageName?: string;
   category?: string;
 }
 
