@@ -69,10 +69,6 @@ export default function Hero() {
                 Get In Touch
               </Button>
             </a>
-            <Button variant="outline" size="lg">
-              Download CV
-              <Download className="ml-2 inline h-4 w-4" />
-            </Button>
           </div>
 
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -92,7 +88,7 @@ export default function Hero() {
             <div className="relative overflow-hidden rounded-[28px] border border-border/80 bg-card/90 p-3 shadow-[0_30px_80px_-30px_rgba(15,23,42,0.45)] backdrop-blur">
               <div className="aspect-[4/5] overflow-hidden rounded-[22px] bg-gradient-to-br from-primary/30 via-white to-accent/20">
                 <img
-                  src="/images/profile/profile.png"
+                  src="/images/profile/profile.png?v=2"
                   alt="Andy Anim"
                   className="h-full w-full object-cover transition duration-700 hover:scale-105"
                   onError={(e) => {
