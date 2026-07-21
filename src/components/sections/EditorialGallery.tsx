@@ -1,27 +1,21 @@
 import { useInView } from "@/hooks/useInView";
 
 const galleryItems = [
-  {
+    {
     title: "Campus Leadership",
-    image: "/images/gallery/campus-leadership.jpg",
+    image: "/images/gallery/IMG_0638.jpg",
     initials: "CL",
     gradient: "from-blue-600 to-blue-800",
-  },
+    },
   {
     title: "Project Builder",
-    image: "/images/gallery/project-builder.jpg",
+    image: "/images/gallery/89107bd9-f3ad-4e83-8f4f-a4d6eb47d87e.png",
     initials: "PB",
     gradient: "from-slate-600 to-slate-800",
   },
   {
-    title: "EdTech Founder",
-    image: "/images/gallery/edtech-founder.jpg",
-    initials: "EF",
-    gradient: "from-blue-500 to-blue-700",
-  },
-  {
     title: "Financial Strategy",
-    image: "/images/gallery/financial-strategy.jpg",
+    image: "/images/gallery/a473bafe-edf4-4e9d-b727-cf85ecf118d4.png",
     initials: "FS",
     gradient: "from-amber-600 to-amber-800",
   },
