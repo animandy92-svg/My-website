@@ -429,3 +429,143 @@
 [info] 
 [info] Project Console: https://console.firebase.google.com/project/andy-anim/overview
 [info] Hosting URL: https://andy-anim.web.app
+[debug] [2026-07-21T03:53:46.729Z] ----------------------------------------------------------------------
+[debug] [2026-07-21T03:53:46.735Z] Command:       C:\nvm4w\nodejs\node.exe C:\Users\anima\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2026-07-21T03:53:46.737Z] CLI Version:   15.22.4
+[debug] [2026-07-21T03:53:46.738Z] Platform:      win32
+[debug] [2026-07-21T03:53:46.738Z] Node Version:  v24.16.0
+[debug] [2026-07-21T03:53:46.739Z] Detected Agent: open_code
+[debug] [2026-07-21T03:53:46.739Z] Time:          Tue Jul 21 2026 03:53:46 GMT+0000 (Greenwich Mean Time)
+[debug] [2026-07-21T03:53:46.739Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-07-21T03:53:52.998Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-07-21T03:53:53.000Z] > authorizing via signed-in user (animandy92@gmail.com)
+[debug] [2026-07-21T03:53:53.001Z] [iam] checking project andy-anim for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-07-21T03:53:53.003Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:53:53.004Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:53:53.006Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/andy-anim:testIamPermissions [none]
+[debug] [2026-07-21T03:53:53.009Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/andy-anim:testIamPermissions  x-goog-user-project=andy-anim
+[debug] [2026-07-21T03:53:53.010Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/andy-anim:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-07-21T03:53:58.066Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/andy-anim:testIamPermissions 200
+[debug] [2026-07-21T03:53:58.066Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/andy-anim:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-07-21T03:53:58.067Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:53:58.068Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:53:58.068Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/andy-anim [none]
+[debug] [2026-07-21T03:53:58.613Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/andy-anim 200
+[debug] [2026-07-21T03:53:58.613Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/andy-anim {"projectId":"andy-anim","projectNumber":"637635862976","displayName":"Andy Anim","name":"projects/andy-anim","resources":{"hostingSite":"andy-anim"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_dc2b3a12-9348-44c5-953a-c29b7f72ec06"}
+[info] 
+[info] === Deploying to 'andy-anim'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-07-21T03:53:58.619Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:53:58.619Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:53:58.620Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/andy-anim/sites/andy-anim [none]
+[debug] [2026-07-21T03:54:04.086Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/andy-anim/sites/andy-anim 200
+[debug] [2026-07-21T03:54:04.087Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/andy-anim/sites/andy-anim {"name":"projects/andy-anim/sites/andy-anim","defaultUrl":"https://andy-anim.web.app","appId":"1:637635862976:web:608f88750c27cffd402825","type":"DEFAULT_SITE"}
+[debug] [2026-07-21T03:54:04.094Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:04.095Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:04.095Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/versions [none]
+[debug] [2026-07-21T03:54:04.095Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-07-21T03:54:06.347Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/versions 200
+[debug] [2026-07-21T03:54:06.347Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/versions {"name":"projects/637635862976/sites/andy-anim/versions/6aaba3762acd6570","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[andy-anim]: beginning deploy... 
+[info] i  hosting[andy-anim]: found 13 files in dist 
+[debug] [2026-07-21T03:54:06.388Z] [hosting] uploading with 200 concurrency
+[debug] [2026-07-21T03:54:06.529Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:06.529Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:06.537Z] [hosting] hash cache [ZGlzdA] stored for 13 files
+[debug] [2026-07-21T03:54:06.538Z] [hosting][hash queue][FINAL] {"max":131,"min":2,"avg":17.076923076923077,"active":0,"complete":13,"success":13,"errored":0,"retried":0,"total":13,"elapsed":145}
+[debug] [2026-07-21T03:54:06.538Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/637635862976/sites/andy-anim/versions/6aaba3762acd6570:populateFiles [none]
+[debug] [2026-07-21T03:54:06.538Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/637635862976/sites/andy-anim/versions/6aaba3762acd6570:populateFiles {"files":{"/window.svg":"6bd2003bd35bb32c1c0d99ab3aeac0cc1edaefd79f27df1d954bc87184048d74\r","/vercel.svg":"529a1a21b4a82475a82db26173c28d7b27e2dc9d4b900eaf1c5329d96eea4ddd\r","/next.svg":"0665b9ab4493aa9d7e988b57024e28772ae543e804b8cf6b0a3633854b7c3c7f\r","/globe.svg":"6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2\r","/file.svg":"5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c\r","/images/profile/profile.png":"48b6eec8cce24114f254ba647c6499c05b1770add8b77d8256ae8f1e8b5e527c","/images/gallery/a473bafe-edf4-4e9d-b727-cf85ecf118d4.png":"08d0efaae150032ba747a1862f7dcf006543aecfcf6afb49feed734c18f982f5","/images/gallery/89107bd9-f3ad-4e83-8f4f-a4d6eb47d87e.png":"aaa78d05bf951d985a1f6db0092d94f9b8555b1470e41ec82eb40037c778135a","/images/education/ucc-crest.png":"dc0b5ca535cb53d121a33136a9b51a282bca21a243a9ef464f44715f2c1cccd3","/index.html":"7065f634045e04eac508a9bd24877c0ca1c85a76127a6e561060469337d01c5f","/assets/index-Cmlmsj6H.css":"e6c389c372dd807d2cebbcd71ec92615040773e3433a58bfa68666518f3d8d44","/assets/index-DcoaaQmM.js":"50c54b56d136787bc28e7de9d55800ed11b3fbbb612dd1152fcae04e0cd47807","/images/gallery/IMG_0638_2.jpg":"e9630bae2b84d8e4f94c8b8ac3862af5fda2837108471fcf25027ee0d2818443"}}
+[debug] [2026-07-21T03:54:08.033Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/637635862976/sites/andy-anim/versions/6aaba3762acd6570:populateFiles 200
+[debug] [2026-07-21T03:54:08.033Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/637635862976/sites/andy-anim/versions/6aaba3762acd6570:populateFiles {"uploadRequiredHashes":["e6c389c372dd807d2cebbcd71ec92615040773e3433a58bfa68666518f3d8d44","7065f634045e04eac508a9bd24877c0ca1c85a76127a6e561060469337d01c5f","50c54b56d136787bc28e7de9d55800ed11b3fbbb612dd1152fcae04e0cd47807"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files"}
+[debug] [2026-07-21T03:54:08.034Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:08.034Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:08.035Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:08.035Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:08.036Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:08.036Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:08.036Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/e6c389c372dd807d2cebbcd71ec92615040773e3433a58bfa68666518f3d8d44 [none]
+[debug] [2026-07-21T03:54:08.036Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/e6c389c372dd807d2cebbcd71ec92615040773e3433a58bfa68666518f3d8d44 [stream]
+[debug] [2026-07-21T03:54:08.040Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/7065f634045e04eac508a9bd24877c0ca1c85a76127a6e561060469337d01c5f [none]
+[debug] [2026-07-21T03:54:08.040Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/7065f634045e04eac508a9bd24877c0ca1c85a76127a6e561060469337d01c5f [stream]
+[debug] [2026-07-21T03:54:08.043Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/50c54b56d136787bc28e7de9d55800ed11b3fbbb612dd1152fcae04e0cd47807 [none]
+[debug] [2026-07-21T03:54:08.043Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/50c54b56d136787bc28e7de9d55800ed11b3fbbb612dd1152fcae04e0cd47807 [stream]
+[debug] [2026-07-21T03:54:08.046Z] [hosting][populate queue][FINAL] {"max":1507,"min":1507,"avg":1507,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1517}
+[debug] [2026-07-21T03:54:08.047Z] [hosting] uploads queued: 3
+[info] i  hosting: uploading new files [0/3] (0%) 
+[info] i  hosting: uploading new files [0/3] (0%) 
+[info] i  hosting: uploading new files [0/3] (0%) 
+[debug] [2026-07-21T03:54:12.731Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/7065f634045e04eac508a9bd24877c0ca1c85a76127a6e561060469337d01c5f 200
+[debug] [2026-07-21T03:54:12.731Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/7065f634045e04eac508a9bd24877c0ca1c85a76127a6e561060469337d01c5f [stream]
+[debug] [2026-07-21T03:54:12.813Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/e6c389c372dd807d2cebbcd71ec92615040773e3433a58bfa68666518f3d8d44 200
+[debug] [2026-07-21T03:54:12.813Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/e6c389c372dd807d2cebbcd71ec92615040773e3433a58bfa68666518f3d8d44 [stream]
+[debug] [2026-07-21T03:54:12.977Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/50c54b56d136787bc28e7de9d55800ed11b3fbbb612dd1152fcae04e0cd47807 200
+[debug] [2026-07-21T03:54:12.978Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andy-anim/versions/6aaba3762acd6570/files/50c54b56d136787bc28e7de9d55800ed11b3fbbb612dd1152fcae04e0cd47807 [stream]
+[debug] [2026-07-21T03:54:12.978Z] [hosting][upload queue][FINAL] {"max":4943,"min":4698,"avg":4807.333333333333,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":4945}
+[info] i  hosting: upload complete 
+[info] +  hosting[andy-anim]: file upload complete 
+[debug] [2026-07-21T03:54:12.979Z] [hosting] deploy completed after 6626ms
+[debug] [2026-07-21T03:54:12.979Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(js|css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000"
+            }
+          ]
+        }
+      ],
+      "site": "andy-anim"
+    },
+    "version": "projects/637635862976/sites/andy-anim/versions/6aaba3762acd6570"
+  }
+]
+[info] i  hosting[andy-anim]: finalizing version... 
+[debug] [2026-07-21T03:54:12.984Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:12.985Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:12.986Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/versions/6aaba3762acd6570 updateMask=status%2Cconfig
+[debug] [2026-07-21T03:54:12.986Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/versions/6aaba3762acd6570 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}],"headers":[{"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp)","headers":{"Cache-Control":"max-age=31536000"}},{"glob":"**/*.@(js|css)","headers":{"Cache-Control":"max-age=31536000"}}]}}
+[debug] [2026-07-21T03:54:14.366Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/versions/6aaba3762acd6570 200
+[debug] [2026-07-21T03:54:14.366Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/versions/6aaba3762acd6570 {"name":"projects/637635862976/sites/andy-anim/versions/6aaba3762acd6570","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"max-age=31536000"},"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp)"},{"headers":{"Cache-Control":"max-age=31536000"},"glob":"**/*.@(js|css)"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-07-21T03:54:06.933123Z","createUser":{"email":"animandy92@gmail.com"},"finalizeTime":"2026-07-21T03:54:16.213373Z","finalizeUser":{"email":"animandy92@gmail.com"}}
+[debug] [2026-07-21T03:54:14.367Z] [hosting] finalized version for andy-anim:[object Object]
+[info] +  hosting[andy-anim]: version finalized 
+[info] i  hosting[andy-anim]: releasing new version... 
+[debug] [2026-07-21T03:54:14.367Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:14.368Z] Checked if tokens are valid: true, expires at: 1784607725205
+[debug] [2026-07-21T03:54:14.368Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/channels/live/releases versionName=projects%2F637635862976%2Fsites%2Fandy-anim%2Fversions%2F6aaba3762acd6570
+[debug] [2026-07-21T03:54:14.368Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/channels/live/releases {}
+[debug] [2026-07-21T03:54:15.960Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/channels/live/releases 200
+[debug] [2026-07-21T03:54:15.960Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andy-anim/channels/live/releases {"name":"projects/637635862976/sites/andy-anim/channels/live/releases/1784606056771000","version":{"name":"projects/637635862976/sites/andy-anim/versions/6aaba3762acd6570","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"max-age=31536000"},"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp)"},{"headers":{"Cache-Control":"max-age=31536000"},"glob":"**/*.@(js|css)"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-07-21T03:54:06.933123Z","createUser":{"email":"animandy92@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ9H_4Nw9hQBFtvLksbvppBpe6Mh2ZO2llXj8XD1OF4g3sA3A=mo"},"finalizeTime":"2026-07-21T03:54:16.213373Z","finalizeUser":{"email":"animandy92@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ9H_4Nw9hQBFtvLksbvppBpe6Mh2ZO2llXj8XD1OF4g3sA3A=mo"}},"type":"DEPLOY","releaseTime":"2026-07-21T03:54:16.771Z","releaseUser":{"email":"animandy92@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ9H_4Nw9hQBFtvLksbvppBpe6Mh2ZO2llXj8XD1OF4g3sA3A=mo"}}
+[debug] [2026-07-21T03:54:15.960Z] [hosting] release: {"name":"projects/637635862976/sites/andy-anim/channels/live/releases/1784606056771000","version":{"name":"projects/637635862976/sites/andy-anim/versions/6aaba3762acd6570","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"max-age=31536000"},"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp)"},{"headers":{"Cache-Control":"max-age=31536000"},"glob":"**/*.@(js|css)"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-07-21T03:54:06.933123Z","createUser":{"email":"animandy92@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ9H_4Nw9hQBFtvLksbvppBpe6Mh2ZO2llXj8XD1OF4g3sA3A=mo"},"finalizeTime":"2026-07-21T03:54:16.213373Z","finalizeUser":{"email":"animandy92@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ9H_4Nw9hQBFtvLksbvppBpe6Mh2ZO2llXj8XD1OF4g3sA3A=mo"}},"type":"DEPLOY","releaseTime":"2026-07-21T03:54:16.771Z","releaseUser":{"email":"animandy92@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ9H_4Nw9hQBFtvLksbvppBpe6Mh2ZO2llXj8XD1OF4g3sA3A=mo"}}
+[info] +  hosting[andy-anim]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/andy-anim/overview
+[info] Hosting URL: https://andy-anim.web.app

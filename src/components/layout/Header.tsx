@@ -20,7 +20,8 @@ export default function Header() {
 
   useEffect(() => {
     const storedTheme = window.localStorage.getItem("theme") as "light" | "dark" | null;
-    const preferredTheme = storedTheme ?? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const preferredTheme = storedTheme ?? (isMobile ? "light" : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
 
     setTheme(preferredTheme);
     document.documentElement.setAttribute("data-theme", preferredTheme);
