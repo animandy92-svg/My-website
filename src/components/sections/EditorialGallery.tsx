@@ -3,7 +3,7 @@ import { useInView } from "@/hooks/useInView";
 const galleryItems = [
     {
     title: "Campus Leadership",
-    image: "/images/gallery/IMG_0638.jpg",
+    image: "/images/gallery/IMG_0638_2.jpg",
     initials: "CL",
     gradient: "from-blue-600 to-blue-800",
     },
