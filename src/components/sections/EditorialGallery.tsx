@@ -61,9 +61,6 @@ export default function EditorialGallery() {
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                <span className="relative text-4xl font-bold text-white/30 select-none">
-                  {item.initials}
-                </span>
               </div>
               <div className="absolute inset-x-0 bottom-0 px-4 py-4 backdrop-blur-sm">
                 <p className="text-sm font-semibold text-foreground">{item.title}</p>
